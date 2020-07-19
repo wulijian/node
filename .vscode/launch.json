@@ -1,0 +1,38 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    // {
+    //   "name": "(lldb) Launch",
+    //   "type": "cppdbg",
+    //   "request": "launch",
+    //   "program": "${workspaceFolder}/out/Debug/Node",
+    //   "stopAtEntry": false,
+    //   "cwd": "${workspaceFolder}",
+    //   "environment": [],
+    //   "externalConsole": true,
+    //   "MIMode": "lldb"
+    // },
+    {
+      "name": "node debug",
+      "type": "cppdbg",
+      "request": "launch",
+      // "preLaunchTask": "make",
+      "program": "${workspaceRoot}/out/Debug/node",
+      // "args": [ // 放开此处，可调试js代码
+      //   "--inspect-brk",
+      //   "./js-test/index.js"
+      // ],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "lldb"
+    },
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "Attact Program",
+      "port": 9229
+    },
+  ]
+}
